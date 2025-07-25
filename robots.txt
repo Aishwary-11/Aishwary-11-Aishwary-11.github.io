@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aishwary-11.github.io/sitemap.xml
+
+# Disallow certain files
+Disallow: /script.js
+Disallow: /sw.js
+Disallow: /*.pdf$

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Aishwary Anand</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .dark-mode .bg-white {
+            background-color: #1e293b !important;
+        }
+        
+        .dark-mode .bg-gray-50 {
+            background-color: #0f172a !important;
+        }
+        
+        .dark-mode .bg-gray-100 {
+            background-color: #1e293b !important;
+        }
+        
+        .dark-mode .text-gray-900 {
+            color: #f1f5f9 !important;
+        }
+        
+        .dark-mode .text-gray-600 {
+            color: #94a3b8 !important;
+        }
+        
+        .dark-mode .text-gray-500 {
+            color: #64748b !important;
+        }
+        
+        .dark-mode .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        .dark-mode nav {
+            background-color: #1e293b !important;
+        }
+        
+        .dark-mode .card-hover {
+            background-color: #1e293b !important;
+            border: 1px solid #334155 !important;
+        }
+        
+        .dark-mode .card-hover:hover {
+            background-color: #334155 !important;
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        .dark-mode .theme-toggle {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-gray-800">Aishwary Anand</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="blog.html" class="text-blue-600 font-semibold">Blog</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="pt-24 pb-12 bg-gradient-to-r from-blue-600 to-purple-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Tech Blog</h1>
+            <p class="text-xl">Insights on Machine Learning, Data Science, and Software Engineering</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-600"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                            <span class="text-gray-500 text-sm ml-auto">Jan 15, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Understanding DDPM for Medical Image Generation</h3>
+                        <p class="text-gray-600 mb-4">Deep dive into Denoising Diffusion Probabilistic Models and their application in generating synthetic medical images for data augmentation...</p>
+                        <a href="blog-post-1.html" class="text-blue-600 font-semibold hover:text-blue-800">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-600"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">NLP</span>
+                            <span class="text-gray-500 text-sm ml-auto">Jan 10, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Building Real-Time Text Prediction with LSTM</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive guide to implementing LSTM-based text prediction systems with focus on low-latency performance and accuracy optimization...</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Data Science</span>
+                            <span class="text-gray-500 text-sm ml-auto">Jan 5, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Optimizing ML Pipeline Performance</h3>
+                        <p class="text-gray-600 mb-4">Best practices for building scalable machine learning pipelines with focus on parallelism, memory optimization, and deployment strategies...</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-red-500 to-orange-600"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Software Engineering</span>
+                            <span class="text-gray-500 text-sm ml-auto">Dec 28, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Agile Development in ML Teams</h3>
+                        <p class="text-gray-600 mb-4">Insights from working in cross-functional teams and applying agile methodologies to machine learning project development...</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-indigo-500 to-blue-600"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Career</span>
+                            <span class="text-gray-500 text-sm ml-auto">Dec 20, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">My Journey as an ML Intern</h3>
+                        <p class="text-gray-600 mb-4">Reflections on my internship experience at Kashylitics, lessons learned, and advice for aspiring ML engineers...</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-yellow-500 to-orange-500"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Tutorial</span>
+                            <span class="text-gray-500 text-sm ml-auto">Dec 15, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Getting Started with PyTorch for Beginners</h3>
+                        <p class="text-gray-600 mb-4">A beginner-friendly guide to PyTorch fundamentals, covering tensors, neural networks, and training loops with practical examples...</p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Stay Updated</h2>
+            <p class="text-xl text-gray-600 mb-8">Subscribe to get notified about new blog posts and tech insights</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">© 2025 Built by Aishwary Anand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle for Blog Page
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const body = document.body;
+            
+            // Load saved theme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-mode');
+                themeIcon.className = 'fas fa-sun';
+            }
+            
+            // Toggle theme
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                
+                if (body.classList.contains('dark-mode')) {
+                    themeIcon.className = 'fas fa-sun';
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    themeIcon.className = 'fas fa-moon';
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

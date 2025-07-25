@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishwary Anand - Software Engineer & ML Enthusiast | Portfolio</title>
+    <meta name="description"
+        content="Computer Science student specializing in Machine Learning and Data Science. Experienced in Python, PyTorch, TensorFlow. Available for software engineering and ML internships.">
+    <meta name="keywords"
+        content="Aishwary Anand, Machine Learning, Data Science, Software Engineer, Python, PyTorch, TensorFlow, Computer Science, BMS College, Bengaluru">
+    <meta name="author" content="Aishwary Anand">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aishwary-11.github.io/">
+    <meta property="og:title" content="Aishwary Anand - Software Engineer & ML Enthusiast">
+    <meta property="og:description"
+        content="Computer Science student specializing in Machine Learning and Data Science. Experienced in Python, PyTorch, TensorFlow.">
+    <meta property="og:image" content="https://aishwary-11.github.io/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aishwary-11.github.io/">
+    <meta property="twitter:title" content="Aishwary Anand - Software Engineer & ML Enthusiast">
+    <meta property="twitter:description"
+        content="Computer Science student specializing in Machine Learning and Data Science. Experienced in Python, PyTorch, TensorFlow.">
+    <meta property="twitter:image" content="https://aishwary-11.github.io/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aishwary-11.github.io/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+
+        .typing-animation {
+            border-right: 2px solid #fff;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                border-color: transparent;
+            }
+
+            51%,
+            100% {
+                border-color: #fff;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .progress-bar {
+            width: 0%;
+            transition: width 2s ease-in-out;
+        }
+
+        .nav-link.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        /* Enhanced Dark Mode Styles */
+        .dark-mode {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .dark-mode .bg-white {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+        }
+        
+        .dark-mode .bg-gray-50 {
+            background-color: #0f172a !important;
+        }
+        
+        .dark-mode .bg-gray-100 {
+            background-color: #1e293b !important;
+        }
+        
+        .dark-mode .text-gray-900 {
+            color: #f1f5f9 !important;
+        }
+        
+        .dark-mode .text-gray-800 {
+            color: #e2e8f0 !important;
+        }
+        
+        .dark-mode .text-gray-700 {
+            color: #cbd5e1 !important;
+        }
+        
+        .dark-mode .text-gray-600 {
+            color: #94a3b8 !important;
+        }
+        
+        .dark-mode .text-gray-500 {
+            color: #64748b !important;
+        }
+        
+        .dark-mode .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        .dark-mode .border-gray-200 {
+            border-color: #334155 !important;
+        }
+        
+        .dark-mode .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%) !important;
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dark-mode .theme-toggle {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        
+        /* Enhanced card styles for dark mode */
+        .dark-mode .card-hover {
+            background-color: #1e293b !important;
+            border: 1px solid #334155 !important;
+        }
+        
+        .dark-mode .card-hover:hover {
+            background-color: #334155 !important;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+        }
+        
+        /* Skill badges dark mode */
+        .dark-mode .skill-badge {
+            background-color: #334155 !important;
+            color: #e2e8f0 !important;
+        }
+        
+        /* Progress bars dark mode */
+        .dark-mode .bg-blue-200 { background-color: #1e40af !important; }
+        .dark-mode .bg-orange-200 { background-color: #ea580c !important; }
+        .dark-mode .bg-gray-200 { background-color: #374151 !important; }
+        .dark-mode .bg-cyan-200 { background-color: #0891b2 !important; }
+        .dark-mode .bg-green-200 { background-color: #059669 !important; }
+        
+        /* Form elements dark mode */
+        .dark-mode input, .dark-mode textarea {
+            background-color: #334155 !important;
+            border-color: #475569 !important;
+            color: #e2e8f0 !important;
+        }
+        
+        .dark-mode input:focus, .dark-mode textarea:focus {
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        }
+        
+        /* Button enhancements */
+        .dark-mode .bg-blue-600 {
+            background-color: #2563eb !important;
+        }
+        
+        .dark-mode .bg-blue-600:hover {
+            background-color: #1d4ed8 !important;
+        }
+        
+        /* Navigation dark mode */
+        .dark-mode nav {
+            background-color: #1e293b !important;
+            border-bottom: 1px solid #334155;
+        }
+        
+        /* Footer dark mode */
+        .dark-mode footer {
+            background-color: #0f172a !important;
+        }
+
+        /* Project filter buttons dark mode */
+        .dark-mode .project-filter {
+            background-color: #334155 !important;
+            color: #e2e8f0 !important;
+            border: 1px solid #475569 !important;
+        }
+        
+        .dark-mode .project-filter.active {
+            background-color: #2563eb !important;
+            color: white !important;
+        }
+        
+        .dark-mode .project-filter:hover {
+            background-color: #475569 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-gray-800">Aishwary Anand</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="#education"
+                        class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Education</a>
+                    <a href="#experience"
+                        class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Experience</a>
+                    <a href="#projects"
+                        class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Projects</a>
+                    <a href="#skills"
+                        class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Skills</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-blue-600 transition duration-300">Blog</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://github.com/Aishwary-11" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aishwary-anand-085a1a1b8/" target="_blank"
+                        class="text-gray-600 hover:text-blue-600 transition duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="mailto:aishwary.cd22@bmsce.ac.in"
+                        class="text-gray-600 hover:text-red-600 transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#education" class="block py-2 text-gray-700 hover:text-blue-600">Education</a>
+                <a href="#experience" class="block py-2 text-gray-700 hover:text-blue-600">Experience</a>
+                <a href="#projects" class="block py-2 text-gray-700 hover:text-blue-600">Projects</a>
+                <a href="#skills" class="block py-2 text-gray-700 hover:text-blue-600">Skills</a>
+                <a href="blog.html" class="block py-2 text-gray-700 hover:text-blue-600">Blog</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Hi, I'm <span class="text-yellow-300 typing-animation" id="typing-text">Aishwary Anand</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 leading-relaxed">
+                    Adaptable Computer Science student with a proven ability to engineer robust ML solutions from
+                    concept to deployment.
+                    Passionate about reducing system complexity and applying data-driven insights to solve challenges in
+                    financial technology and risk management.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <span class="text-3xl font-bold text-yellow-300">12%</span>
+                        <p class="text-sm">Model Performance Improvement</p>
+                    </div>
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <span class="text-3xl font-bold text-yellow-300">38%</span>
+                        <p class="text-sm">System Efficiency Boost</p>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact"
+                        class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition duration-300">
+                        Let's Connect
+                    </a>
+                    <a href="#projects"
+                        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300">
+                        View My Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Education</h2>
+                <p class="text-xl text-gray-600">My academic journey in Computer Science</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- College Education -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-8 card-hover border-l-4 border-blue-500">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">BMS College of Engineering, Bengaluru</h3>
+                            <p class="text-lg text-blue-600 font-semibold mb-2">B.Tech in Computer Science and
+                                Engineering (Data Science)</p>
+                            <p class="text-gray-600 mb-2">2022 – 2026</p>
+                            <p class="text-lg font-semibold text-green-600">CGPA: 7.5/10</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-blue-50 rounded-lg p-4">
+                                <p class="text-sm text-gray-600 mb-2">Relevant Coursework:</p>
+                                <div class="flex flex-wrap gap-2 justify-end">
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">DSA</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">ML</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">DL</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">OS</span>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">DBMS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- School Education -->
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover border-l-4 border-green-500">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div class="mb-4 md:mb-0">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Delhi Public School, Patna</h3>
+                            <p class="text-gray-600 mb-2">Higher Secondary & Secondary Education</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-green-50 rounded-lg p-4">
+                                <p class="text-lg font-semibold text-green-600 mb-1">Higher Secondary: 86% (2021)</p>
+                                <p class="text-lg font-semibold text-green-600">Secondary: 85% (2019)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Experience</h2>
+                <p class="text-xl text-gray-600">Professional journey and internships</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mr-6">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-brain text-white text-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-1">Machine Learning Intern</h3>
+                                    <p class="text-lg text-purple-600 font-semibold mb-2">Kashylitics</p>
+                                </div>
+                                <div class="text-right">
+                                    <span
+                                        class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-semibold">July
+                                        – Sept 2025</span>
+                                </div>
+                            </div>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Built a scalable LLM evaluation pipeline to guide model selection and
+                                        deployment</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Automated test generation and scoring system using Python and ML
+                                        libraries</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                    <span>Worked in Agile teams, collaborating daily with cross-functional
+                                        stakeholders</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600">Showcasing my technical expertise and problem-solving skills</p>
+            </div>
+
+            <!-- Project Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button
+                    class="project-filter active bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition duration-300"
+                    data-filter="all">All Projects</button>
+                <button
+                    class="project-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-300 transition duration-300"
+                    data-filter="ml">Machine Learning</button>
+                <button
+                    class="project-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-300 transition duration-300"
+                    data-filter="web">Web Development</button>
+                <button
+                    class="project-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-300 transition duration-300"
+                    data-filter="data">Data Science</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" id="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-200 fade-in"
+                    data-category="ml">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Medical Image Augmentation System</h3>
+                        <p class="text-blue-100">2025</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            Boosted diagnostic F1-score by 12% using DDPM to generate synthetic medical images.
+                            Cut training time by 38% through parallelism and noise scheduling.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-2">Key Achievements:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-chart-line text-green-500 mr-2"></i>
+                                    <span>12% improvement in diagnostic F1-score</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                    <span>38% reduction in training time</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-cogs text-purple-500 mr-2"></i>
+                                    <span>Full pipeline for data ingestion and export</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span
+                                    class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">DDPM</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">OpenCV</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Aishwary-11" target="_blank"
+                                class="inline-flex items-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub
+                            </a>
+                            <button
+                                class="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                                onclick="openDemo('medical-demo')">
+                                <i class="fas fa-play mr-2"></i>
+                                Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-200 fade-in"
+                    data-category="ml">
+                    <div class="bg-gradient-to-r from-green-500 to-teal-600 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Real-Time Text Prediction System</h3>
+                        <p class="text-green-100">2024</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            Delivered 94% accurate real-time LSTM-based text predictions.
+                            Trained on a 5M+ word dataset for low-latency performance.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-2">Key Achievements:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-bullseye text-green-500 mr-2"></i>
+                                    <span>94% prediction accuracy</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-database text-blue-500 mr-2"></i>
+                                    <span>5M+ word training dataset</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-tachometer-alt text-purple-500 mr-2"></i>
+                                    <span>Low-latency real-time performance</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">LSTM</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">NLP</span>
+                                <span
+                                    class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">TensorFlow</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Aishwary-11" target="_blank"
+                                class="inline-flex items-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub
+                            </a>
+                            <button
+                                class="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                                onclick="openDemo('text-demo')">
+                                <i class="fas fa-play mr-2"></i>
+                                Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-200 fade-in"
+                    data-category="web">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-600 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Portfolio Website</h3>
+                        <p class="text-purple-100">2025</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            Modern, responsive portfolio website built with TailwindCSS and vanilla JavaScript.
+                            Features smooth animations, mobile-first design, and interactive elements.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-mobile-alt text-green-500 mr-2"></i>
+                                    <span>Fully responsive design</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-magic text-blue-500 mr-2"></i>
+                                    <span>Smooth animations and transitions</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-rocket text-purple-500 mr-2"></i>
+                                    <span>Optimized performance</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                                <span
+                                    class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">TailwindCSS</span>
+                                <span
+                                    class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                <span
+                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Responsive</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Aishwary-11" target="_blank"
+                                class="inline-flex items-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub
+                            </a>
+                            <button
+                                class="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                                onclick="openDemo('portfolio-demo')">
+                                <i class="fas fa-external-link-alt mr-2"></i>
+                                Live Site
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-200 fade-in"
+                    data-category="data">
+                    <div class="bg-gradient-to-r from-red-500 to-orange-600 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Financial Risk Analytics Dashboard</h3>
+                        <p class="text-red-100">2024</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            Interactive dashboard for financial risk analysis using real-time market data.
+                            Implemented advanced statistical models for risk assessment and portfolio optimization.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-chart-line text-green-500 mr-2"></i>
+                                    <span>Real-time data visualization</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-blue-500 mr-2"></i>
+                                    <span>Risk assessment algorithms</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-balance-scale text-purple-500 mr-2"></i>
+                                    <span>Portfolio optimization</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Pandas</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Plotly</span>
+                                <span
+                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Streamlit</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Aishwary-11" target="_blank"
+                                class="inline-flex items-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub
+                            </a>
+                            <button
+                                class="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                                onclick="openDemo('finance-demo')">
+                                <i class="fas fa-play mr-2"></i>
+                                Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-200 fade-in"
+                    data-category="ml">
+                    <div class="bg-gradient-to-r from-indigo-500 to-blue-600 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Computer Vision Object Detection</h3>
+                        <p class="text-indigo-100">2024</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            Real-time object detection system using YOLO architecture.
+                            Achieved 89% mAP on custom dataset with optimized inference pipeline.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-2">Key Achievements:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-eye text-green-500 mr-2"></i>
+                                    <span>89% mAP accuracy</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                    <span>Real-time processing (30+ FPS)</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-cogs text-purple-500 mr-2"></i>
+                                    <span>Optimized inference pipeline</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">YOLO</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">OpenCV</span>
+                                <span
+                                    class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">PyTorch</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Aishwary-11" target="_blank"
+                                class="inline-flex items-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub
+                            </a>
+                            <button
+                                class="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                                onclick="openDemo('cv-demo')">
+                                <i class="fas fa-play mr-2"></i>
+                                Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-200 fade-in"
+                    data-category="data">
+                    <div class="bg-gradient-to-r from-teal-500 to-cyan-600 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Big Data Processing Pipeline</h3>
+                        <p class="text-teal-100">2024</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 mb-4 leading-relaxed">
+                            Scalable data processing pipeline using Apache Spark and Hadoop.
+                            Processes 10TB+ of data daily with fault-tolerant architecture.
+                        </p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <i class="fas fa-database text-green-500 mr-2"></i>
+                                    <span>10TB+ daily processing</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-blue-500 mr-2"></i>
+                                    <span>Fault-tolerant architecture</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-expand-arrows-alt text-purple-500 mr-2"></i>
+                                    <span>Auto-scaling capabilities</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Apache
+                                    Spark</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Hadoop</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Kafka</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Docker</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/Aishwary-11" target="_blank"
+                                class="inline-flex items-center bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition duration-300">
+                                <i class="fab fa-github mr-2"></i>
+                                GitHub
+                            </a>
+                            <button
+                                class="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                                onclick="openDemo('bigdata-demo')">
+                                <i class="fas fa-play mr-2"></i>
+                                Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <! -- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+                    <p class="text-xl text-gray-600">Technologies and tools I work with</p>
+                </div>
+
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Languages -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-code text-blue-500 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-bold text-gray-900">Languages</h3>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="skill-item">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-blue-800">Python</span>
+                                        <span class="text-sm text-gray-500">95%</span>
+                                    </div>
+                                    <div class="w-full bg-blue-200 rounded-full h-2">
+                                        <div class="progress-bar bg-blue-600 h-2 rounded-full" data-width="95"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-orange-800">Java</span>
+                                        <span class="text-sm text-gray-500">85%</span>
+                                    </div>
+                                    <div class="w-full bg-orange-200 rounded-full h-2">
+                                        <div class="progress-bar bg-orange-600 h-2 rounded-full" data-width="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-800">C/C++</span>
+                                        <span class="text-sm text-gray-500">80%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="progress-bar bg-gray-600 h-2 rounded-full" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-cyan-800">Go</span>
+                                        <span class="text-sm text-gray-500">70%</span>
+                                    </div>
+                                    <div class="w-full bg-cyan-200 rounded-full h-2">
+                                        <div class="progress-bar bg-cyan-600 h-2 rounded-full" data-width="70"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-green-800">SQL</span>
+                                        <span class="text-sm text-gray-500">90%</span>
+                                    </div>
+                                    <div class="w-full bg-green-200 rounded-full h-2">
+                                        <div class="progress-bar bg-green-600 h-2 rounded-full" data-width="90"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ML/AI -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-brain text-purple-500 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-bold text-gray-900">ML/AI</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="skill-badge bg-orange-100 text-orange-800 px-3 py-2 rounded-lg font-medium">PyTorch</span>
+                                <span
+                                    class="skill-badge bg-blue-100 text-blue-800 px-3 py-2 rounded-lg font-medium">TensorFlow</span>
+                                <span
+                                    class="skill-badge bg-red-100 text-red-800 px-3 py-2 rounded-lg font-medium">Keras</span>
+                                <span
+                                    class="skill-badge bg-green-100 text-green-800 px-3 py-2 rounded-lg font-medium">Scikit-learn</span>
+                                <span
+                                    class="skill-badge bg-purple-100 text-purple-800 px-3 py-2 rounded-lg font-medium">Transformers</span>
+                            </div>
+                        </div>
+
+                        <!-- Data Science -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-chart-bar text-green-500 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-bold text-gray-900">Data Science</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="skill-badge bg-blue-100 text-blue-800 px-3 py-2 rounded-lg font-medium">Pandas</span>
+                                <span
+                                    class="skill-badge bg-yellow-100 text-yellow-800 px-3 py-2 rounded-lg font-medium">NumPy</span>
+                                <span
+                                    class="skill-badge bg-green-100 text-green-800 px-3 py-2 rounded-lg font-medium">OpenCV</span>
+                                <span
+                                    class="skill-badge bg-red-100 text-red-800 px-3 py-2 rounded-lg font-medium">Matplotlib</span>
+                                <span
+                                    class="skill-badge bg-indigo-100 text-indigo-800 px-3 py-2 rounded-lg font-medium">NLTK</span>
+                            </div>
+                        </div>
+
+                        <!-- Databases -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-database text-indigo-500 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-bold text-gray-900">Databases</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="skill-badge bg-blue-100 text-blue-800 px-3 py-2 rounded-lg font-medium">MySQL</span>
+                                <span
+                                    class="skill-badge bg-green-100 text-green-800 px-3 py-2 rounded-lg font-medium">MongoDB</span>
+                                <span
+                                    class="skill-badge bg-purple-100 text-purple-800 px-3 py-2 rounded-lg font-medium">Cassandra</span>
+                                <span
+                                    class="skill-badge bg-yellow-100 text-yellow-800 px-3 py-2 rounded-lg font-medium">Hadoop</span>
+                            </div>
+                        </div>
+
+                        <!-- Tools -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-tools text-red-500 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-bold text-gray-900">Tools</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="skill-badge bg-blue-100 text-blue-800 px-3 py-2 rounded-lg font-medium">Docker</span>
+                                <span
+                                    class="skill-badge bg-orange-100 text-orange-800 px-3 py-2 rounded-lg font-medium">Git</span>
+                                <span
+                                    class="skill-badge bg-purple-100 text-purple-800 px-3 py-2 rounded-lg font-medium">VS
+                                    Code</span>
+                                <span
+                                    class="skill-badge bg-yellow-100 text-yellow-800 px-3 py-2 rounded-lg font-medium">Jupyter</span>
+                                <span
+                                    class="skill-badge bg-gray-100 text-gray-800 px-3 py-2 rounded-lg font-medium">Unix/Linux</span>
+                            </div>
+                        </div>
+
+                        <!-- Frameworks -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-layer-group text-teal-500 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-bold text-gray-900">Frameworks</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="skill-badge bg-green-100 text-green-800 px-3 py-2 rounded-lg font-medium">ML
+                                    Pipelines</span>
+                                <span
+                                    class="skill-badge bg-blue-100 text-blue-800 px-3 py-2 rounded-lg font-medium">Data
+                                    Pipelines</span>
+                                <span
+                                    class="skill-badge bg-purple-100 text-purple-800 px-3 py-2 rounded-lg font-medium">Enterprise
+                                    Scale</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-3">Focus on ML/data pipelines; learning enterprise-scale
+                                infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Let's Connect</h2>
+                    <p class="text-xl text-gray-600">Looking to collaborate or hire? Let's talk!</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Contact Info -->
+                        <div class="bg-gray-50 rounded-xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-blue-500 text-xl mr-4"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Email</p>
+                                        <a href="mailto:aishwary.cd22@bmsce.ac.in"
+                                            class="text-blue-600 hover:text-blue-800">aishwary.cd22@bmsce.ac.in</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone text-green-500 text-xl mr-4"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Phone</p>
+                                        <a href="tel:+917091043125"
+                                            class="text-green-600 hover:text-green-800">+91-7091043125</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-red-500 text-xl mr-4"></i>
+                                    <div>
+                                        <p class="font-semibold text-gray-900">Location</p>
+                                        <p class="text-gray-600">Bengaluru, Karnataka, India</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Connect with me</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://github.com/Aishwary-11" target="_blank"
+                                        class="bg-gray-800 text-white p-3 rounded-lg hover:bg-gray-700 transition duration-300">
+                                        <i class="fab fa-github text-xl"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/aishwary-anand-085a1a1b8/" target="_blank"
+                                        class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300">
+                                        <i class="fab fa-linkedin text-xl"></i>
+                                    </a>
+                                    <a href="mailto:aishwary.cd22@bmsce.ac.in"
+                                        class="bg-red-500 text-white p-3 rounded-lg hover:bg-red-600 transition duration-300">
+                                        <i class="fas fa-envelope text-xl"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+                            <form action="mailto:aishwary.cd22@bmsce.ac.in" method="post" enctype="text/plain">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                    <input type="text" id="name" name="name"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email"
+                                        class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" name="email"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="message"
+                                        class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        required></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">About Me</h2>
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            I'm passionate about leveraging machine learning and data science to solve real-world
+                            problems,
+                            particularly in fintech and healthcare domains. When I'm not coding, I enjoy exploring new
+                            ML research papers
+                            and contributing to open-source projects that make technology more accessible.
+                        </p>
+                        <div class="flex justify-center">
+                            <a href="resume.pdf" download="Aishwary_Anand_Resume.pdf"
+                                class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 inline-flex items-center">
+                                <i class="fas fa-download mr-2"></i>
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-lg font-semibold">Aishwary Anand</p>
+                        <p class="text-gray-400">Software Engineer & ML Enthusiast</p>
+                    </div>
+                    <div class="flex space-x-6 mb-4 md:mb-0">
+                        <a href="https://github.com/Aishwary-11" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/aishwary-anand-085a1a1b8/" target="_blank"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:aishwary.cd22@bmsce.ac.in"
+                            class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                    <p class="text-gray-400">© 2025 Built by Aishwary Anand. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Enhanced Interactive Scripts -->
+        <script>
+            // Typing animation
+            function typeWriter(element, text, speed = 100) {
+                let i = 0;
+                element.innerHTML = '';
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    }
+                }
+                type();
+            }
+
+            // Initialize typing animation
+            document.addEventListener('DOMContentLoaded', function () {
+                const typingElement = document.getElementById('typing-text');
+                if (typingElement) {
+                    setTimeout(() => {
+                        typeWriter(typingElement, 'Aishwary Anand', 150);
+                    }, 1000);
+                }
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Active navigation highlighting
+            window.addEventListener('scroll', () => {
+                const navbar = document.querySelector('nav');
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+
+                // Navbar shadow effect
+                if (window.scrollY > 100) {
+                    navbar.classList.add('shadow-lg');
+                } else {
+                    navbar.classList.remove('shadow-lg');
+                }
+
+                // Active section highlighting
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Fade in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Skills progress bar animation
+            const skillsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progressBars = entry.target.querySelectorAll('.progress-bar');
+                        progressBars.forEach(bar => {
+                            const width = bar.getAttribute('data-width');
+                            setTimeout(() => {
+                                bar.style.width = width + '%';
+                            }, 500);
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const skillsSection = document.querySelector('#skills');
+            if (skillsSection) {
+                skillsObserver.observe(skillsSection);
+            }
+
+            // Project filtering
+            const projectFilters = document.querySelectorAll('.project-filter');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            projectFilters.forEach(filter => {
+                filter.addEventListener('click', () => {
+                    // Update active filter
+                    projectFilters.forEach(f => {
+                        f.classList.remove('active', 'bg-blue-600', 'text-white');
+                        f.classList.add('bg-gray-200', 'text-gray-700');
+                    });
+                    filter.classList.add('active', 'bg-blue-600', 'text-white');
+                    filter.classList.remove('bg-gray-200', 'text-gray-700');
+
+                    // Filter projects
+                    const filterValue = filter.getAttribute('data-filter');
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Demo modal functionality
+            function openDemo(demoType) {
+                const demos = {
+                    'medical-demo': {
+                        title: 'Medical Image Augmentation System Demo',
+                        content: 'This demo showcases the DDPM-based medical image generation system. The model can generate synthetic medical images that improve diagnostic accuracy by 12%.',
+                        features: ['Real-time image generation', 'Quality assessment metrics', 'Training pipeline visualization']
+                    },
+                    'text-demo': {
+                        title: 'Real-Time Text Prediction Demo',
+                        content: 'Interactive text prediction system with 94% accuracy. Type to see real-time predictions based on LSTM neural network.',
+                        features: ['Real-time predictions', 'Context-aware suggestions', 'Performance metrics']
+                    },
+                    'portfolio-demo': {
+                        title: 'Portfolio Website',
+                        content: 'You are currently viewing the live portfolio website! This responsive design showcases modern web development practices.',
+                        features: ['Responsive design', 'Smooth animations', 'Interactive elements']
+                    },
+                    'finance-demo': {
+                        title: 'Financial Risk Analytics Dashboard',
+                        content: 'Interactive dashboard for financial risk analysis with real-time market data visualization and portfolio optimization.',
+                        features: ['Real-time data feeds', 'Risk assessment algorithms', 'Portfolio optimization tools']
+                    },
+                    'cv-demo': {
+                        title: 'Computer Vision Object Detection',
+                        content: 'Real-time object detection system using YOLO architecture with 89% mAP accuracy and 30+ FPS performance.',
+                        features: ['Real-time detection', 'Multiple object classes', 'Performance optimization']
+                    },
+                    'bigdata-demo': {
+                        title: 'Big Data Processing Pipeline',
+                        content: 'Scalable data processing pipeline using Apache Spark and Hadoop, processing 10TB+ of data daily.',
+                        features: ['Fault-tolerant architecture', 'Auto-scaling', 'Real-time monitoring']
+                    }
+                };
+
+                const demo = demos[demoType];
+                if (demo) {
+                    showModal(demo.title, demo.content, demo.features);
+                }
+            }
+
+            function showModal(title, content, features) {
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+                modal.innerHTML = `
+                <div class="bg-white rounded-xl max-w-2xl w-full max-h-96 overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900">${title}</h3>
+                            <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <p class="text-gray-700 mb-6">${content}</p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                            <ul class="space-y-2">
+                                ${features.map(feature => `
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        <span class="text-gray-700">${feature}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        <div class="flex gap-3">
+                            <button onclick="this.closest('.fixed').remove()" class="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-300">
+                                Close
+                            </button>
+                            <a href="https://github.com/Aishwary-11" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+                document.body.appendChild(modal);
+            }
+
+            // Contact form enhancement
+            const contactForm = document.querySelector('form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Show success message
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4';
+                    successMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Message sent successfully! I\'ll get back to you soon.';
+
+                    this.parentNode.insertBefore(successMessage, this);
+                    this.reset();
+
+                    // Remove success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 5000);
+                });
+            }
+
+            // Add particle background effect
+            function createParticles() {
+                const hero = document.querySelector('#home');
+                const particlesContainer = document.createElement('div');
+                particlesContainer.className = 'absolute inset-0 overflow-hidden pointer-events-none';
+
+                for (let i = 0; i < 50; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'absolute w-2 h-2 bg-white opacity-20 rounded-full';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 20 + 's';
+                    particle.style.animation = 'float 20s infinite linear';
+                    particlesContainer.appendChild(particle);
+                }
+
+                hero.appendChild(particlesContainer);
+            }
+
+            // Add floating animation keyframes
+            const style = document.createElement('style');
+            style.textContent = `
+            @keyframes float {
+                0% { transform: translateY(100vh) rotate(0deg); }
+                100% { transform: translateY(-100vh) rotate(360deg); }
+            }
+        `;
+            document.head.appendChild(style);
+
+            // Initialize particles
+            document.addEventListener('DOMContentLoaded', createParticles);
+
+            // Enhanced Theme Toggle
+            document.addEventListener('DOMContentLoaded', function() {
+                const themeToggle = document.getElementById('theme-toggle');
+                const themeIcon = document.getElementById('theme-icon');
+                const body = document.body;
+                
+                // Load saved theme
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    body.classList.add('dark-mode');
+                    themeIcon.className = 'fas fa-sun';
+                }
+                
+                // Toggle theme
+                themeToggle.addEventListener('click', () => {
+                    body.classList.toggle('dark-mode');
+                    
+                    if (body.classList.contains('dark-mode')) {
+                        themeIcon.className = 'fas fa-sun';
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        themeIcon.className = 'fas fa-moon';
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            });
+
+            // Smooth reveal animations
+            window.addEventListener('load', () => {
+                document.querySelectorAll('.fade-in').forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 100);
+                });
+            });
+        </script>
+</body>
+
+</html>
