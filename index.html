@@ -196,10 +196,66 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
         }
         
+        /* Education section dark mode improvements */
+        .dark-mode .bg-blue-50 {
+            background-color: #1e40af !important;
+        }
+        
+        .dark-mode .bg-green-50 {
+            background-color: #065f46 !important;
+        }
+        
+        /* Coursework tags dark mode */
+        .dark-mode .bg-blue-100 {
+            background-color: #1e40af !important;
+            color: #e0e7ff !important;
+        }
+        
+        .dark-mode .text-blue-800 {
+            color: #e0e7ff !important;
+        }
+        
+        /* School scores dark mode */
+        .dark-mode .text-green-600 {
+            color: #34d399 !important;
+        }
+        
+        /* Relevant Coursework text dark mode */
+        .dark-mode .text-gray-600 {
+            color: #d1d5db !important;
+        }
+        
+        /* Education card content dark mode */
+        .dark-mode .bg-blue-50 .text-gray-600 {
+            color: #e0e7ff !important;
+        }
+        
+        .dark-mode .bg-green-50 .text-green-600 {
+            color: #6ee7b7 !important;
+        }
+        
         /* Skill badges dark mode */
         .dark-mode .skill-badge {
             background-color: #334155 !important;
             color: #e2e8f0 !important;
+        }
+        
+        /* Coursework tags specific colors for dark mode */
+        .dark-mode .bg-blue-100.text-blue-800 {
+            background-color: #1e40af !important;
+            color: #dbeafe !important;
+            border: 1px solid #3b82f6;
+        }
+        
+        /* Education card backgrounds for better contrast */
+        .dark-mode .bg-blue-50 {
+            background-color: #1e293b !important;
+            border: 1px solid #3b82f6 !important;
+        }
+        
+        .dark-mode .bg-green-50 {
+            background-color: #1e293b !important;
+            border: 1px solid #10b981 !important;
         }
         
         /* Progress bars dark mode */
@@ -255,6 +311,37 @@
         
         .dark-mode .project-filter:hover {
             background-color: #475569 !important;
+        }
+        
+        /* Education section specific improvements */
+        .dark-mode .border-l-4.border-blue-500 {
+            border-left-color: #3b82f6 !important;
+        }
+        
+        .dark-mode .border-l-4.border-green-500 {
+            border-left-color: #10b981 !important;
+        }
+        
+        /* Text improvements for education cards */
+        .dark-mode .text-blue-600 {
+            color: #60a5fa !important;
+        }
+        
+        .dark-mode .text-green-600 {
+            color: #34d399 !important;
+        }
+        
+        /* Coursework container dark mode */
+        .dark-mode .rounded-lg.p-4 {
+            background-color: #374151 !important;
+            border: 1px solid #4b5563 !important;
+        }
+        
+        /* Coursework tags with better visibility */
+        .dark-mode span.bg-blue-100 {
+            background-color: #1d4ed8 !important;
+            color: #f0f9ff !important;
+            font-weight: 600 !important;
         }
     </style>
 </head>
@@ -699,15 +786,7 @@
                                         <div class="progress-bar bg-gray-600 h-2 rounded-full" data-width="80"></div>
                                     </div>
                                 </div>
-                                <div class="skill-item">
-                                    <div class="flex justify-between mb-1">
-                                        <span class="text-sm font-medium text-cyan-800">Go</span>
-                                        <span class="text-sm text-gray-500">70%</span>
-                                    </div>
-                                    <div class="w-full bg-cyan-200 rounded-full h-2">
-                                        <div class="progress-bar bg-cyan-600 h-2 rounded-full" data-width="70"></div>
-                                    </div>
-                                </div>
+
                                 <div class="skill-item">
                                     <div class="flex justify-between mb-1">
                                         <span class="text-sm font-medium text-green-800">SQL</span>
