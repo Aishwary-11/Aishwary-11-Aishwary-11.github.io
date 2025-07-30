@@ -257,23 +257,95 @@
             }
         }
 
-        /* Hero text styling for better visibility */
+        /* Hero text styling - Dynamic colors for light/dark mode */
         .hero-text {
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        /* Light mode hero text - Blue color */
+        body:not(.dark-mode) .hero-text {
+            color: #1e40af;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Dark mode hero text - White color */
+        .dark-mode .hero-text {
             color: white;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        /* Ensure hero section always has white text */
+        /* Hero section base styling */
         #home {
             color: white;
+            transition: all 0.3s ease;
         }
 
-        #home h1 {
+        /* Light mode hero section */
+        body:not(.dark-mode) #home {
+            color: #1e40af;
+        }
+
+        /* Dark mode hero section */
+        .dark-mode #home {
             color: white;
         }
 
+        /* Achievement stats colors */
         #home .text-yellow-300 {
             color: #fcd34d !important;
+        }
+
+        /* Light mode achievement stats */
+        body:not(.dark-mode) #home .text-yellow-300 {
+            color: #f59e0b !important;
+        }
+
+        /* Hi, I'm text color */
+        .hero-title {
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        /* Light mode hero title */
+        body:not(.dark-mode) .hero-title {
+            color: #1e40af;
+        }
+
+        /* Dark mode hero title */
+        .dark-mode .hero-title {
+            color: white;
+        }
+
+        /* Hero button secondary styling */
+        .hero-btn-secondary {
+            border-color: white;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        /* Light mode secondary button */
+        body:not(.dark-mode) .hero-btn-secondary {
+            border-color: #1e40af;
+            color: #1e40af;
+            background: rgba(30, 64, 175, 0.1);
+        }
+
+        body:not(.dark-mode) .hero-btn-secondary:hover {
+            background: #1e40af;
+            color: white;
+        }
+
+        /* Dark mode secondary button */
+        .dark-mode .hero-btn-secondary {
+            border-color: white;
+            color: white;
+        }
+
+        .dark-mode .hero-btn-secondary:hover {
+            background: white;
+            color: #1f2937;
         }
 
         @keyframes gradientShift {
@@ -657,7 +729,7 @@
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="max-w-3xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 hero-title">
                     Hi, I'm <span class="gradient-text typing-animation" id="typing-text">Aishwary Anand</span>
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 leading-relaxed text-white hero-text">
@@ -681,7 +753,7 @@
                         Let's Connect
                     </a>
                     <a href="#projects"
-                        class="modern-btn glass-card border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300 shadow-lg hover:shadow-xl">
+                        class="modern-btn glass-card border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300 shadow-lg hover:shadow-xl hero-btn-secondary">
                         View My Work
                     </a>
                 </div>
