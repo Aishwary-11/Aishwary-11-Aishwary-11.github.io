@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishwary Anand - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        @media print {
+            body { print-color-adjust: exact; }
+            .no-print { display: none; }
+        }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .skill-bar { transition: width 2s ease-in-out; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Print/Download Button -->
+    <div class="no-print fixed top-4 right-4 z-50">
+        <button onclick="window.print()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center">
+            <i class="fas fa-download mr-2"></i>
+            Download PDF
+        </button>
+    </div>
+
+    <!-- Resume Container -->
+    <div class="max-w-4xl mx-auto bg-white shadow-2xl my-8">
+        <!-- Header Section -->
+        <div class="gradient-bg text-white p-8">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-4xl font-bold mb-2">Aishwary Anand</h1>
+                    <p class="text-xl text-blue-100 mb-4">Computer Science Student | ML Engineer</p>
+                    <p class="text-blue-100">Innovative CS student with expertise in Machine Learning, Full-Stack Development, and Data Science</p>
+                </div>
+                <div class="text-right">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-white bg-opacity-30 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <i class="fas fa-user text-3xl text-white"></i>
+                            </div>
+                            <p class="text-sm">Available for Internships</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="bg-gray-100 px-8 py-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                <div class="flex items-center">
+                    <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                    <span>aishwary.cd22@bmsce.ac.in</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-phone text-green-600 mr-2"></i>
+                    <span>+91-7091043125</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fab fa-linkedin text-blue-700 mr-2"></i>
+                    <span>linkedin.com/in/aishwary-anand</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fab fa-github text-gray-700 mr-2"></i>
+                    <span>github.com/Aishwary-11</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-8">
+            <!-- Education Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+                    <i class="fas fa-graduation-cap text-blue-600 mr-2"></i>Education
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">BMS College of Engineering, Bengaluru</h3>
+                            <p class="text-blue-600 font-medium">B.Tech in Computer Science and Engineering (Data Science)</p>
+                            <p class="text-gray-600">Relevant Coursework: DSA, ML, DL, OS, DBMS</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-gray-600">2022 – 2026</p>
+                            <p class="text-lg font-bold text-green-600">CGPA: 7.6/10</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Delhi Public School, Patna</h3>
+                            <p class="text-gray-600">Higher Secondary & Secondary Education</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-green-600 font-semibold">Higher Secondary: 86% (2021)</p>
+                            <p class="text-green-600 font-semibold">Secondary: 85% (2019)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+                    <i class="fas fa-briefcase text-blue-600 mr-2"></i>Experience
+                </h2>
+                <div class="border-l-4 border-blue-600 pl-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">Machine Learning Intern</h3>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">July – Sept 2025</span>
+                    </div>
+                    <p class="text-blue-600 font-medium mb-3">Kashylitics</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                            <span>Built a scalable LLM evaluation pipeline to guide model selection and deployment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                            <span>Automated test generation and scoring system using Python and ML libraries</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                            <span>Worked in Agile teams, collaborating daily with cross-functional stakeholders</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+                    <i class="fas fa-code text-blue-600 mr-2"></i>Key Projects
+                </h2>
+                <div class="space-y-6">
+                    <!-- Project 1 -->
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg border-l-4 border-blue-600">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Medical Image Augmentation System</h3>
+                            <span class="text-gray-600 text-sm">2025</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Boosted diagnostic F1-score by 12% using DDPM to generate synthetic medical images. Cut training time by 38% through parallelism and noise scheduling.</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">PyTorch</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">DDPM</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">OpenCV</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-sm">
+                            <div class="flex items-center text-green-600">
+                                <i class="fas fa-chart-line mr-1"></i>
+                                <span>12% F1-score improvement</span>
+                            </div>
+                            <div class="flex items-center text-blue-600">
+                                <i class="fas fa-clock mr-1"></i>
+                                <span>38% faster training</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-lg border-l-4 border-green-600">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-semibold text-gray-800">Real-Time Text Prediction System</h3>
+                            <span class="text-gray-600 text-sm">2024</span>
+                        </div>
+                        <p class="text-gray-700 mb-3">Delivered 94% accurate real-time LSTM-based text predictions. Trained on a 5M+ word dataset for low-latency performance.</p>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">LSTM</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">NLP</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">TensorFlow</span>
+                        </div>
+                        <div class="flex items-center space-x-4 text-sm">
+                            <div class="flex items-center text-green-600">
+                                <i class="fas fa-bullseye mr-1"></i>
+                                <span>94% accuracy</span>
+                            </div>
+                            <div class="flex items-center text-blue-600">
+                                <i class="fas fa-database mr-1"></i>
+                                <span>5M+ word dataset</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+                    <i class="fas fa-cogs text-blue-600 mr-2"></i>Technical Skills
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Programming Languages -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Programming Languages</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">Python</span>
+                                    <span class="text-sm text-gray-600">95%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-blue-600 h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">Java</span>
+                                    <span class="text-sm text-gray-600">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-orange-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">C/C++</span>
+                                    <span class="text-sm text-gray-600">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-gray-600 h-2 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">SQL</span>
+                                    <span class="text-sm text-gray-600">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-green-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technologies & Frameworks -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-3">Technologies & Frameworks</h3>
+                        <div class="space-y-2">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">PyTorch</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">TensorFlow</span>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Keras</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Scikit-learn</span>
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Transformers</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">NumPy</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Pandas</span>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">OpenCV</span>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs">Matplotlib</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">NLTK</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">MySQL</span>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">MongoDB</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Docker</span>
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">Git</span>
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs">Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+                    <i class="fas fa-trophy text-blue-600 mr-2"></i>Key Achievements
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-chart-line text-green-600 text-2xl mr-3"></i>
+                            <div>
+                                <p class="text-2xl font-bold text-green-600">12%</p>
+                                <p class="text-sm text-gray-600">Model Performance Improvement</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-rocket text-blue-600 text-2xl mr-3"></i>
+                            <div>
+                                <p class="text-2xl font-bold text-blue-600">38%</p>
+                                <p class="text-sm text-gray-600">System Efficiency Boost</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-100 px-8 py-4 text-center text-sm text-gray-600">
+            <p>This resume was generated on <span id="current-date"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString();
+        
+        // Print functionality
+        window.addEventListener('beforeprint', function() {
+            document.title = 'Aishwary_Anand_Resume';
+        });
+    </script>
+</body>
+</html>
