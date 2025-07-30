@@ -221,29 +221,47 @@
             100% { background-position: 50px 50px, 75px 75px; }
         }
 
-        /* Gradient text effects */
+        /* Gradient text effects - Enhanced for better visibility */
         .gradient-text {
-            background: linear-gradient(45deg, #1e40af, #7c3aed, #dc2626, #ea580c);
-            background-size: 300% 300%;
+            background: linear-gradient(45deg, #dc2626, #ea580c, #7c3aed, #1e40af);
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 3s ease infinite;
+            animation: gradientShift 4s ease infinite;
+            font-weight: 700;
+            text-shadow: 0 0 30px rgba(220, 38, 38, 0.3);
         }
         
         /* Dark mode gradient text - lighter colors */
         .dark-mode .gradient-text {
-            background: linear-gradient(45deg, #60a5fa, #a78bfa, #f87171, #fb923c);
-            background-size: 300% 300%;
+            background: linear-gradient(45deg, #f87171, #fb923c, #a78bfa, #60a5fa);
+            background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 3s ease infinite;
+            animation: gradientShift 4s ease infinite;
+            font-weight: 700;
+            text-shadow: 0 0 30px rgba(248, 113, 113, 0.3);
+        }
+        
+        /* Fallback for browsers that don't support background-clip */
+        @supports not (-webkit-background-clip: text) {
+            .gradient-text {
+                color: #dc2626;
+                background: none;
+            }
+            .dark-mode .gradient-text {
+                color: #f87171;
+                background: none;
+            }
         }
 
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
             100% { background-position: 0% 50%; }
         }
 
